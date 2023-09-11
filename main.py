@@ -43,5 +43,11 @@ class TestGeometryLibrary(unittest.TestCase):
         with self.assertRaises(ValueError):
             negative_circle = Circle(-2.5)
 
+    def test_is_right_triangle(self):
+        # Проверка треугольника на правильность
+        triangle = Triangle(3, 4, 5)
+        self.assertEqual(triangle.is_right_triangle(), True)
+
+
 if __name__ == '__main__':
     unittest.main()
